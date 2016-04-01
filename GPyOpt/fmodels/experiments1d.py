@@ -44,4 +44,26 @@ class forrester(function1d):
 			noise = np.random.normal(0,self.sd,n).reshape(n,1)
 		return fval.reshape(n,1) + noise
 
+class fourier(function1d):
+	'''
+	Forrester function. 
+	
+	:param sd: standard deviation, to generate noisy evaluations of the function.
+	'''
+	def __init__(self,sd=None):
+		self.input_dim = 1		
+		if sd==None: self.sd = 0
+		else: self.sd=sd
+		self.min = 4.795 		## approx
+		self.fmin = -9.5083483926941064 			## approx
+		self.bounds = [(0,10)]
 
+	def f(self,X):
+		X = X.reshape((len(X),1))
+		n = X.shape[0]
+		fval = X*np.sin(X)+X*np.cos(2*X)
+		if self.sd ==0:
+			noise = np.zeros(n).reshape(n,1)
+		else:
+			noise = np.random.normal(0,self.sd,n).reshape(n,1)
+		return fval.reshape(n,1) + noise

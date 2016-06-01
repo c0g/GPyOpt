@@ -14,8 +14,9 @@ Gaussian process optimization using [GPy](http://sheffieldml.github.io/GPy/). Pe
       author =   {The GPyOpt authors},
       title =    {{GPyOpt}: A Bayesian Optimization framework in python},
       howpublished = {\url{http://github.com/SheffieldML/GPyOpt}},
-      year = {2015}
+      year = {2016}
     }
+
 
 Getting started
 ===============
@@ -40,6 +41,11 @@ Dependencies:
   - DIRECT (optional)
   - cma (optional)
   - pyDOE (optional)
+
+
+### IMPORTANT NOTICE:
+We are currently working on a new optimized version of GPyOpt with more features. You can have a look to it in the [devel](https://github.com/SheffieldML/GPyOpt/tree/devel) branch of this repository. We don't expect important changes in the interface but there may be some minor adjustments. You can have a look to this [tutorial](https://github.com/SheffieldML/GPyOpt/blob/devel/manual/index.ipynb) for further details.
+
 
 Funding Acknowledgements
 ========================
